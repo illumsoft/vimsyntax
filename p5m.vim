@@ -8,3 +8,11 @@ if exists("b:current_syntax")
   finish
 endif
 
+let s:cpo_save = &cpo
+set cpo&vim
+
+let b:current_syntax = "p5m"
+
+let &cpo = s:cpo_save
+unlet s:cpo_save
+
