@@ -1,0 +1,26 @@
+{
+  "packages": [], 
+  "publishers": [
+    {
+      "alias": null, 
+      "name": "solaris", 
+      "packages": [
+        "consolidation/l10n/l10n-all"
+      ], 
+      "repositories": [
+        {
+          "collection_type": "core", 
+          "description": "This repository serves the Oracle Solaris 11 Package repository.", 
+          "legal_uris": [], 
+          "mirrors": [], 
+          "name": "Oracle Solaris 11 Package Repository", 
+          "origins": [], 
+          "refresh_seconds": null, 
+          "registration_uri": "", 
+          "related_uris": []
+        }
+      ]
+    }
+  ], 
+  "version": 1
+}

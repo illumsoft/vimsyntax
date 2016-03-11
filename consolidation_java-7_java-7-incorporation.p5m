@@ -1,0 +1,11 @@
+set name=pkg.fmri value=pkg://solaris/consolidation/java-7/java-7-incorporation@1.7.0.95.14,5.11-0:20160107T224536Z
+set name=org.opensolaris.consolidation value=java
+set name=info.classification value="org.opensolaris.category.2008:Meta Packages/Incorporations"
+set name=pkg.summary value="java consolidation incorporation"
+set name=pkg.description value="This incorporation constrains packages from the java consolidation."
+set name=variant.arch value=sparc value=i386
+depend fmri=developer/java/jdk-7@1.7.0.95.14,5.11 type=incorporate
+depend fmri=runtime/java/jre-7@1.7.0.95.14,5.11 type=incorporate
+depend fmri=library/java/java-demo-7@1.7.0.95.14,5.11 type=incorporate
+depend fmri=runtime/java/jre@1.7.0.95.14,5.11 type=incorporate
+signature 2ce2688faa049abe9d5dceeeabc4b17e7b72e792 algorithm=rsa-sha256 chain="0b92f277201b21fa7646d61e6a140e9113cb53e8 0dbb8e895d191c8fc77395d2316e27eaf18e9f68" chain.chashes="719fdd327781c4b5f9a7ed53c2c2df6dc682c525 4be6e30de00fbb52e5ea9aff7c3b83739081f65c" chain.csizes="1269 1358" chain.sizes="1761 1887" chash=38842b8af27b1d0d33124fa20e2880f1841e9273 pkg.csize=1392 pkg.size=1935 value=8e0f16836698445511b3a62f8934ee888fd9890d1b2a271e876531464aadbf4f81db520c705cac5fbae77bf441b74caa866b46a014fb654a8f180cce829eaef965ec473307058d66c75cbd2e5f855817a8e6f1ca3694b77da73a16882ee697a3651a06016b1321cdbaa7f01a10743875a3a1c26a045f04b7dc81f03bf7c8cebe6ebed91cc1c4b39a1faabe42ceed3a4a9af77480eab5a44682bb63e4a094fc5be81be6d45070b57d9951748e33678e9ce19d0d8fb9b0ed3fc37988cd0bf53bdd9ccf324818d71f67da001d56f16a9a06123bbcea252d4d2aa3323f64a862ed9c925b6598865bd697518bedfdea829c0b664013da61e04295c7640e946506ad60 version=0

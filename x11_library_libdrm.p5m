@@ -1,0 +1,95 @@
+set name=pkg.fmri value=pkg://solaris/x11/library/libdrm@2.4.43,5.11-0.175.3.0.0.30.1483:20150821T173522Z
+set name=pkg.description value="User-space library interface to kernel modules using the Direct Rendering Infrastructure (DRI) and Kernel Mode-Setting (KMS) interfaces"
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=info.source-url value=http://dri.freedesktop.org/libdrm/libdrm-2.4.43.tar.bz2
+set name=info.upstream value="Direct Rendering Infrastructure project"
+set name=info.upstream-url value=http://dri.freedesktop.org/
+license 96389dc606181d12d3f613babdeafcf3e5655421 chash=34e459b8d8a48e0ae5ddb8c55d494efba4465da7 license="MIT License (libdrm)" pkg.csize=4361 pkg.size=104298
+set name=com.oracle.info.tpno value=9900
+set name=com.oracle.info.description value="the libdrm library"
+set name=com.oracle.info.version value=2.4.43
+set name=com.oracle.info.name value=libdrm
+set name=org.opensolaris.consolidation value=X
+set name=info.maintainer-url value=http://solaris-x11.java.net/ value=http://www.oracle.com/solaris/
+set name=info.repository-url value=https://hg.java.net/hg/solaris-x11~x-s11-update-clone
+set name=variant.opensolaris.zone value=global value=nonglobal
+set name=info.repository-changeset value="221e9d9cc9cb s11u3_30"
+set name=variant.arch value=sparc value=i386
+set name=pkg.summary value="Direct Rendering Module (DRM) client libraries/interface"
+depend fmri=pkg:/system/library@0.5.11-0.175.3.0.0.29.1 type=require
+depend fmri=pkg:/consolidation/X/X-incorporation type=require
+depend facet.devel=true fmri=pkg:/x11/header/x11-protocols type=require
+depend fmri=pkg:/diagnostic/scanpci@0.13.2-0.175.3.0.0.30.1483 type=require variant.arch=i386
+dir facet.devel=true group=bin mode=0755 owner=root path=usr/include/libdrm
+dir facet.devel=true group=bin mode=0755 owner=root path=usr/include/libkms
+file 86798529b309b8771b0f7ef01f12680377af5350 chash=998143faf6c6cceb9ab5c75afa5dccac8580d55e facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/via_drm.h pkg.csize=3016 pkg.size=8291
+file 748089304820976a2389de8a649e08b4d3301385 chash=87c653aa90fb90aec97ee7278fd4354531010612 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/drm.h pkg.csize=7764 pkg.size=26385
+file 1c41d6d77f8acdc327e79e1f49f48fffde7ca07c chash=c4b2af65392aed5ab72185930104a96c3ea31c65 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/r600_pci_ids.h pkg.csize=1857 pkg.size=12906
+file c2f869ed9d8ee5550b2da35cc48d03aeb76902a3 chash=edcfcad15b70bd1650dbbf5c6d4910c43d2ee01d facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/r128_drm.h pkg.csize=3307 pkg.size=9901
+file 9718ec7f481df4501755396513b550b4102d0a17 chash=4b5fd2515ec81644abf9f07dc97474f7f5ae6d8c facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/nouveau_drm.h pkg.csize=1846 pkg.size=5572
+file c14a6cf4f88129978d7904812c81c15a523a9835 chash=d387199e10aa572d60a2112d63dd815facbcc327 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/sis_drm.h pkg.csize=1096 pkg.size=2534
+file 7d41880083180d8a9a1b0f4da0db37f4eb297a41 chash=c2d20ddc4eb33a30982995af9a862625645153e6 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_bo_int.h pkg.csize=417 pkg.size=1673
+file ec96bedc934a984cffa3af725994afffe63d20c7 chash=fdbfbf137635d20317be05519e39689dba6dcfb7 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_cs_gem.h pkg.csize=913 pkg.size=1601
+file 95a1fc5ef1d34abf504842c120d4779efe2b960f chash=94e195502bfdb258e4771b9d23eef313ba6e8559 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_bo_gem.h pkg.csize=1004 pkg.size=1991
+file fe36173dccf259e6d845b2a9d8982b23a05526e4 chash=4858144b64455217a3e58374398d34a9fe8b8a58 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_cs.h pkg.csize=1747 pkg.size=5121
+file d90dca2ad98c6880c218bb2e39805f85113bdaab chash=13cdb73d7dbcfd539e3d37dd9317ba2525593ccf facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_drm.h pkg.csize=8581 pkg.size=32672
+file 1fc53e0c2db8b8d0a835cb290b8840eb40febfef chash=a9171ded811d517d45630cd75b9bd8fac4077e24 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_cs_int.h pkg.csize=590 pkg.size=2173
+file 82aeab78deb2a403a92d59db79da8060abb57f15 chash=0b879e6e12ce1942414436e5499b378ca6e971b0 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/savage_drm.h pkg.csize=2508 pkg.size=7054
+file 5eb5f2715e32a3089e5b1fa17fadc58521700bc8 chash=2bbca26da58e612807625acbd215dd8350edefec facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_surface.h pkg.csize=1638 pkg.size=4982
+file cac57976704387cc40ac74b58b9f9bc32bc31483 chash=5719695673b6ddac5d5b926dc7e509d965b5d230 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/radeon_bo.h pkg.csize=1144 pkg.size=2839
+file 8bb0ddf75d6ecf033cf56ac24201d3af136852f4 chash=63db82952c7d908ccd9dd1f1ae84107cb8ba2980 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/drm_mode.h pkg.csize=4365 pkg.size=12628
+file ff8ab79d5badfe99e3b813ef43640692e8818a6f chash=f9e8bc7664e460589e71a90ad548cfe64ab347ee facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/drm_fourcc.h pkg.csize=1815 pkg.size=7818
+file 403b4a4ec0cd0611d902fa72b6bac89b209765a0 chash=849e47778ea40e7b55391a8858d02fa8ee9b304f facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/drm_sarea.h pkg.csize=1266 pkg.size=2629
+file 3a3d1b8e069be9f2b3ed3ec036982629112a22a1 chash=55766e121cee210ddf4c08494d44658471d0cce9 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/i915_drm.h pkg.csize=8067 pkg.size=29144
+file ec24bfc2215c88d3977875b3272b46062ce79fd7 chash=4f59994257ca1c39ca5016e8190fb69beb8b71fc facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/mach64_drm.h pkg.csize=2849 pkg.size=7895
+file 552559b577c41bec7d517c73b4b748e3cccb4bfe chash=5b177e5ffd81153084c706d5039b961091f4a152 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/mga_drm.h pkg.csize=4391 pkg.size=12923
+file 5c4d0f54bbf2d6ccdfcbbb64f2637e90fd9d11a2 chash=c36f8d157a7fa456666a8932825f74acd1b611ec facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/vmwgfx_drm.h pkg.csize=4950 pkg.size=17088
+file 7a56e3cf0f989905148db3bf4d57e261fc522ed8 chash=4be1fa0dc665745667771a2a27231d03cbbb26b8 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libkms/libkms.h pkg.csize=1088 pkg.size=2489
+file 4e51d259a8795cfc160c6dc366f2fd3c0508fc5f chash=a9cb0225ad6496be573de7d54dc290c119d78d53 facet.devel=true group=bin mode=0444 owner=root path=usr/include/xf86drm.h pkg.csize=7980 pkg.size=28788
+file 12ecd46e12fda8b692b676c7666d83314434be24 chash=09d833d3eb8858cd842fcc84cc5c2c5c8b0e1306 facet.devel=true group=bin mode=0444 owner=root path=usr/include/xf86drmMode.h pkg.csize=4058 pkg.size=13419
+file d3f7015a18c0d94875cd5a4520071e5c407ab9c0 chash=ad659cedf556b563b4988dfa2e1e5bc2e9c0e37a facet.devel=true group=bin mode=0444 owner=root path=usr/lib/sparcv9/pkgconfig/libdrm.pc pkg.csize=193 pkg.size=271 variant.arch=sparc
+file 22d30f977186dcf5c9011d4f1b0f9f559a50d0be chash=f020c0f73a236d8540361a54d9431ad3718460cc facet.devel=true group=bin mode=0444 owner=root path=usr/lib/sparcv9/pkgconfig/libkms.pc pkg.csize=208 pkg.size=285 variant.arch=sparc
+file 9ae3d2d13a364d46420c6da11b1710b7a342fff8 chash=0d36e492935a4b5dada32c7376459e910bfeddcd facet.devel=true group=bin mode=0444 owner=root path=usr/lib/pkgconfig/libdrm.pc pkg.csize=187 pkg.size=263
+file 366a6b51f46722bb7e60f0968ee287df5a4d903d chash=ccdc85a2b453604ee25e6c27f18276cfe0aa4a8b facet.devel=true group=bin mode=0444 owner=root path=usr/lib/pkgconfig/libkms.pc pkg.csize=202 pkg.size=277
+file d158a4cd75155989a33a9fc4fd0ada8ce5f96544 chash=31856e1543f598d2116bfca0e03c5aafa40b1736 elfarch=sparc elfbits=64 elfhash=f4842b072035b88c900fe77b4c73464dfd396948 group=bin mode=0555 owner=root path=usr/lib/xorg/sparcv9/libdrm.so.2 pkg.csize=22534 pkg.size=66824 variant.arch=sparc
+file 2eee2c0281cff2fc41d730ded45b24e83a007bea chash=62a138fb100838d7fde8e24a3b179d9381f94200 elfarch=sparc elfbits=64 elfhash=9246730182568d2d926dd73bf1d4bd8f08c8c7c9 group=bin mode=0555 owner=root path=usr/lib/xorg/sparcv9/libkms.so.1 pkg.csize=6499 pkg.size=25352 variant.arch=sparc
+file 381d3a6896163999f88e93d65eea1331c925bd39 chash=163468623563843d0476e004fbc07f3fd84719dc elfarch=sparc elfbits=32 elfhash=8eb8caacf827fa0f5cfc76cc542074d40cedb0e7 group=bin mode=0555 owner=root path=usr/lib/xorg/libdrm.so.2 pkg.csize=21750 pkg.size=53352 variant.arch=sparc
+file 07115d892551e9bc6c3c6bec1a060b91ad2a37ca chash=0e657c9cb71b1913af667fa9de3377a9d4b77144 elfarch=sparc elfbits=32 elfhash=6c4e9fdca0a5a62807ca3b106faadd18e6f7d538 group=bin mode=0555 owner=root path=usr/lib/xorg/libkms.so.1 pkg.csize=6342 pkg.size=22552 variant.arch=sparc
+file 719f2d6416ed0a541d40b6865e2d7fb00a64815a chash=1399abbeca78d7ed867047f4b5eb8da43b9eaedf facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man3/drmAvailable.3 pkg.csize=946 pkg.size=2014
+file d31cd68e3d595eae7e7a048da098c9ff917740c4 chash=7c21742fd67c90dde2a94afdaf5d08a45b578295 facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man3/drmHandleEvent.3 pkg.csize=1283 pkg.size=3050
+file 7098c2ee5c65d1887f48dc629843e0634c1fc21d chash=5a2fc8e603242bd356fc85bb14b96500f2860150 facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man3/drmModeGetResources.3 pkg.csize=1701 pkg.size=4170
+file c945874837180f9192c33990d06aca1282dfea20 chash=b1de14b0b2a0e351592c2b3dc055c1c8bd50e88d facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm-gem.7 pkg.csize=42 pkg.size=22
+file 31c6b24493d0393f37c3ee5fd19a370306238eb9 chash=a17bd62ee67bb9ec0d93971c7e4a346c1beaf810 facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm-kms.7 pkg.csize=4462 pkg.size=11587
+file bdee68c7976719a3e53b8b7724bf2b237f4953c4 chash=b901a5ff923efdc300719f1b15095c463cea12e0 facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm-memory.7 pkg.csize=5325 pkg.size=15164
+file c945874837180f9192c33990d06aca1282dfea20 chash=b1de14b0b2a0e351592c2b3dc055c1c8bd50e88d facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm-mm.7 pkg.csize=42 pkg.size=22
+file c945874837180f9192c33990d06aca1282dfea20 chash=b1de14b0b2a0e351592c2b3dc055c1c8bd50e88d facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm-ttm.7 pkg.csize=42 pkg.size=22
+file a728cbd3ee57fd1e5b629bc7ae216200112a666d chash=dfd037c7708d2c76ed905548a301f104e6de10a1 facet.doc.man=true group=bin mode=0444 owner=root path=usr/share/man/man7/drm.7 pkg.csize=2200 pkg.size=5002
+file f701cd9aa02cba9143a701edceeab2ec344a996c chash=114c2e6fcdc1609f57e928944eca09cbbcaa9f14 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/intel_bufmgr.h pkg.csize=3054 pkg.size=11177 variant.arch=i386
+file 27d567c46d9d311385296c82888a5494f9a62c93 chash=c9a6f0bdd08c991f999c5385843cc0e117e90bf6 facet.devel=true group=bin mode=0444 owner=root path=usr/include/libdrm/intel_debug.h pkg.csize=940 pkg.size=1585 variant.arch=i386
+file 812312f3324a555003c56f652f4a6da6f75cc18b chash=d649d723b61b3fbd34005d1219924b3763c90956 facet.devel=true group=bin mode=0444 owner=root path=usr/lib/amd64/pkgconfig/libdrm.pc pkg.csize=191 pkg.size=269 variant.arch=i386
+file 9150ee6e75cdd9fc2723de59a6d6f0c52296e248 chash=96f2f1bab6782a0e1ce8203e36dc06a61822c5b4 facet.devel=true group=bin mode=0444 owner=root path=usr/lib/amd64/pkgconfig/libdrm_intel.pc pkg.csize=202 pkg.size=292 variant.arch=i386
+file eb4450266db494a56f8cd7a324eb0610bd6ce925 chash=0b765e2aa613f5e47ce5082680f1c58154e4367a facet.devel=true group=bin mode=0444 owner=root path=usr/lib/amd64/pkgconfig/libdrm_radeon.pc pkg.csize=201 pkg.size=294 variant.arch=i386
+file 3e0f9975fc166e2721acab15d63efe302ef2695a chash=fca5528f72a16ce7913245f29cc5704053c10eb0 facet.devel=true group=bin mode=0444 owner=root path=usr/lib/amd64/pkgconfig/libkms.pc pkg.csize=211 pkg.size=283 variant.arch=i386
+file 7b83699f37a7b129eb662daa5bb6903ea778ca8c chash=5ba8b05bfc12f568bee7df1e19967669abe5feb3 facet.devel=true group=bin mode=0444 owner=root path=usr/lib/pkgconfig/libdrm_intel.pc pkg.csize=196 pkg.size=286 variant.arch=i386
+file fce7038b5bab576f3eda78d4351f70c5a98458dd chash=86074cccc36c901bd872f30691c4e36baff5ebbc facet.devel=true group=bin mode=0444 owner=root path=usr/lib/pkgconfig/libdrm_radeon.pc pkg.csize=194 pkg.size=288 variant.arch=i386
+file 4252150dfa78b97b4ddab5fbc4cd15c1cb2ffc99 chash=0c1d08eb28571b7b1bc4e0a85c2d5953a4eaf591 elfarch=i386 elfbits=64 elfhash=b2f8426008e3bf493eb08d485c46023cae6392e2 group=bin mode=0555 owner=root path=usr/lib/xorg/amd64/libdrm.so.2 pkg.csize=26231 pkg.size=64608 variant.arch=i386
+file 312176e26d7e602546187a5fc163373d4006b310 chash=f21fd7dfe3275113f0075b6ee073226c0b3504cb elfarch=i386 elfbits=64 elfhash=58ec5d7c59c2f31c2f68c4cb8f9fb83acd543021 group=bin mode=0555 owner=root path=usr/lib/xorg/amd64/libdrm_intel.so.1 pkg.csize=82092 pkg.size=207456 variant.arch=i386
+file fb2ae68c16e78c59d3f92c7adcb599b6a585a34b chash=96e5008c9c0cab3bf960b9ac33ff4bec0d1d5a9a elfarch=i386 elfbits=64 elfhash=89f6308f4a609821ed22bbecbd6cd4d519e65f32 group=bin mode=0555 owner=root path=usr/lib/xorg/amd64/libdrm_radeon.so.1 pkg.csize=25326 pkg.size=61392 variant.arch=i386
+file a3bf90ef3ad34e2c7ac41e9cdfe18c78c2659ad4 chash=09fb3ff83429fa265c2a2f5080c98588a21353b0 elfarch=i386 elfbits=64 elfhash=2d7687c89d1d359039873ced0d4efbe830fd65c5 group=bin mode=0555 owner=root path=usr/lib/xorg/amd64/libkms.so.1 pkg.csize=6958 pkg.size=24024 variant.arch=i386
+file 88be8797b14f3e9a46f2abad954392c88b7e5b0d chash=325f01589fa572b9d933c215e6ffa6124321670e elfarch=i386 elfbits=32 elfhash=8bad08dc56f75097a8c85bcecd1d1dc8094c3b05 group=bin mode=0555 owner=root path=usr/lib/xorg/libdrm.so.2 pkg.csize=23074 pkg.size=52676 variant.arch=i386
+file 2457e561da355900d641eb00cc32629608c238cd chash=4d7e1cec6a73d095ad6a727a1229cf2d1c054176 elfarch=i386 elfbits=32 elfhash=aa09710ca4e3fa46ed624f379c3b93e8fb0a7408 group=bin mode=0555 owner=root path=usr/lib/xorg/libdrm_intel.so.1 pkg.csize=78711 pkg.size=201508 variant.arch=i386
+file c580b21c2e0902f68446de75266f180ad8c82e6c chash=c99960e387c3a20c941f81601df220643ed3b7d8 elfarch=i386 elfbits=32 elfhash=93703daf6c7acce471485f1f2dcdea080d9ffcd6 group=bin mode=0555 owner=root path=usr/lib/xorg/libdrm_radeon.so.1 pkg.csize=23420 pkg.size=50384 variant.arch=i386
+file 2da03eaa8ac0a6233c2427ee981ff4921032cd8a chash=a48be960810c043c03f5ebcb0a4a1ed90bb19021 elfarch=i386 elfbits=32 elfhash=222cd1d62d2d7881cc210af622f3140475db5283 group=bin mode=0555 owner=root path=usr/lib/xorg/libkms.so.1 pkg.csize=6222 pkg.size=17888 variant.arch=i386
+link facet.compat.x11-links=true path=usr/X11/include/drm target=../../include/drm
+link path=usr/include/drm target=libdrm
+link path=usr/lib/xorg/sparcv9/libdrm.so target=libdrm.so.2 variant.arch=sparc
+link path=usr/lib/xorg/libkms.so target=libkms.so.1
+link path=usr/lib/xorg/sparcv9/libkms.so target=libkms.so.1 variant.arch=sparc
+link path=usr/lib/xorg/libdrm.so target=libdrm.so.2
+link path=usr/lib/xorg/amd64/libdrm.so target=libdrm.so.2 variant.arch=i386
+link path=usr/lib/xorg/amd64/libdrm_intel.so target=libdrm_intel.so.1 variant.arch=i386
+link path=usr/lib/xorg/amd64/libdrm_radeon.so target=libdrm_radeon.so.1 variant.arch=i386
+link path=usr/lib/xorg/amd64/libkms.so target=libkms.so.1 variant.arch=i386
+link path=usr/lib/xorg/libdrm_intel.so target=libdrm_intel.so.1 variant.arch=i386
+link path=usr/lib/xorg/libdrm_radeon.so target=libdrm_radeon.so.1 variant.arch=i386
+signature 235c7674d821032ae3eeda280c7837d1f1f4fdb5 algorithm=rsa-sha256 chain="8e422c1bb80b05f08f7a849f3d7ae90a976e048e 754665e03bd28ef63b05a416073eb6d649624781" chain.chashes="083e40bb50e6964834ebfd3c66b8720b46028068 f85dabbb0d56b37de3c3de98663dd8f27a12ff8e" chain.csizes="1273 1326" chain.sizes="1773 2061" chash=05654e46fc5cac3b9b9bd11c39512bc92bc85089 pkg.csize=1281 pkg.size=1753 value=679ae8268f3869af473deb004b6d4aa71a723fc54a212f878585198ca32538962cd028e17b3b96ff0f4199ac4590d8b2b73ad01ebb9cadc22d3e8480cbbecd023fdadfd676c1c0b8c19042c65e8da88cebd588cc0e32fa6487741b64a63269b5560317ab2a2676bb038859c9e33044e359d0006f9d836061bd027dca432ae3cccf2682eed94f2579dba24a0f734ab64e6c4336c4360669c7163bced1c36d41a1bd253770552323f5ade94195c7416b1be300f7c17308f6d6030e05879f48a8a019c9859a1c843beb46a95f5d21cc8e117e687dea4f9914bd1c4a6089b65f7c3bfebcba1077a46987a50902d23478230d8ca22313c2a4e65b6b665e4a2efed94e version=0
